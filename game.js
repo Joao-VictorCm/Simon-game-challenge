@@ -1,4 +1,7 @@
 const buttonColours = ["red", "blue", "green", "yellow"]
+const gamePattern = []
+
+
 
 
 
@@ -8,6 +11,10 @@ function nextSequence(){
 
     var randomChosenColour = buttonColours[randomNumber]
     console.log(randomChosenColour)
+
+
+    gamePattern.push(randomChosenColour)
+    console.log(gamePattern)
 }
 
 
