@@ -10,9 +10,24 @@ $(".btn").click(function () {
   userClickedPattern.push(userChosenColour);
   console.log(userClickedPattern);
 
+
+
+function animatePress(currentColour){
+  currentColour = $("#" +userChosenColour).addClass("pressed")
+  
+
+  setInterval(function(currentColour){
+    currentColour = $("#" + userChosenColour).removeClass("pressed");
+  }, 100);
+}
+animatePress()
+
+
  playSound(userChosenColour)
 
 });
+
+
 
 function nextSequence() {
   var randomNumber = Math.floor(Math.random() * 4);
@@ -39,3 +54,4 @@ function playSound(name){
   var audio = new Audio("./sounds/" + name + ".mp3");
   audio.play();
 }
+
